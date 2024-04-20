@@ -1,0 +1,31 @@
+displayName: crossover-managed
+type: middleware
+iconPath: .assets/icon.png
+
+import: github.com/kotalco/crossover-managed
+
+summary: "crossover managed"
+
+
+testData:
+  #pattern used to extract the requestId from the urlPath
+  Pattern: "([a-z0-9]{42})"
+  #ActivityAddress the address used to store the request activity
+  ActivityAddress: "http://localhost:8083/api/v1/crossover/endpoints/stats"
+  #PlanAddress the address used to get the user plan details
+  PlanAddress: "http://localhost:8083/api/v1/crossover/subscriptions/request-limit"
+  #APIKey to validate the request integrity
+  APIKey: "c499a9cf54b4f5b8281762802b55462a8d020c835e6795ce4d1b6d268f6e32a5"
+  #BufferSize  buffer size for the activity entries channel
+  BufferSize: 100000
+  #BatchSize number of activity to batch together sent to save
+  BatchSize: 20
+  #FlushInterval Time in seconds interval to flush activities to the database
+  FlushInterval: 2
+  #RedisAddress address
+  RedisAddress: "localhost:6379"
+  #RedisAuth to authenticate redis
+  RedisAuth: "123456"
+  #CacheExpiry response cache expiry in seconds
+  CacheExpiry: 10
+

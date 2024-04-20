@@ -1,0 +1,4 @@
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/kotalco/resp v0.0.0-20240312133441-2407e9e1118c h1:R6iMaeIbvNBIs8WdHhHmH9vvElqCtsHCgYhA8tyJPL0=
+github.com/kotalco/resp v0.0.0-20240312133441-2407e9e1118c/go.mod h1:+7+oV/yGtCk7K98vCqoFkkhG0gzoyfp/zNMtuSyxn08=
