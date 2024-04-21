@@ -111,6 +111,7 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 		apiKey:          config.APIKey,
 		planAddress:     config.PlanAddress,
 		redisAddress:    config.RedisAddress,
+		redisAuth:       config.RedisAuth,
 		cacheExpiry:     config.CacheExpiry,
 		activityService: newActivity,
 		cacheService:    newCacheService,
