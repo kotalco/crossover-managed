@@ -122,7 +122,6 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 }
 
 func (crossover *Crossover) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
-	log.Println(crossover.redisAuth, crossover.redisAddress)
 	respClient, err := resp.NewRedisClient(crossover.redisAddress, crossover.redisAuth)
 	if err != nil {
 		log.Printf("Failed to create Redis Connection %s", err.Error())
