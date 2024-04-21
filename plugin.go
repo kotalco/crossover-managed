@@ -160,19 +160,9 @@ func (crossover *Crossover) ServeHTTP(rw http.ResponseWriter, req *http.Request)
 		return
 	}
 
-	//clone request
-	clonedRequest, err := crossover.cloneRequest(req)
-	if err != nil {
-		rw.WriteHeader(http.StatusInternalServerError)
-		rw.Write([]byte(err.Error()))
-		return
-	}
-	//
 	//store user activity
-	//count request body
-	requestCount := crossover.requestCount(clonedRequest)
 	requestKey := crossover.requestKey(req.URL.Path)
-	crossover.activityService.LogActivity(requestKey, requestCount)
+	crossover.activityService.LogActivity(requestKey, 1)
 
 	//cache response
 	crossover.cacheService.ServeHTTP(rw, req, crossover.next, respClient)
